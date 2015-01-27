@@ -13,3 +13,6 @@ console.log(testArray);
 console.log(testObject);
 
 testInt = 5;
+testInt = testString;
+testBoolean = testInt;
+testString = testBoolean;
