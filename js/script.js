@@ -17,24 +17,23 @@ console.log(testString);
 console.log(testArray);
 console.log(testObject);
 
-function test(testInt)
+var test = function(testInt)
 {
 	testInt = 10;
-}
+};
 
-function test2()
+var test2 = function()
 {
 	var testInt = 10;
 	testInt = 5;
-}
+};
 
 var test3 = function(x, y)
 {
 	return x * y;
 };
 
-var test4 = function()
+var test4 = function(arr, x)
 {
-	testInt = 5;
-	var testInt = 10;
+	return arr[x];
 };
