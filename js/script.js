@@ -17,7 +17,7 @@ console.log(testString);
 console.log(testArray);
 console.log(testObject);
 
-function test()
+function test(testInt)
 {
 	testInt = 10;
 }
@@ -25,14 +25,16 @@ function test()
 function test2()
 {
 	var testInt = 10;
+	testInt = 5;
 }
 
-var test3 = function()
+var test3 = function(x, y)
 {
-	testInt = 10;
+	return x * y;
 };
 
 var test4 = function()
 {
+	testInt = 5;
 	var testInt = 10;
 };
