@@ -1,5 +1,17 @@
 'use strict';
 
+// jQuery
+$(document).ready(function()
+{
+	console.log('jQuery Ready');
+	var i = 10;
+	$('.clickTest').click(function()
+	{
+		i++;
+		$('.jqueryViewTest2').text(i);
+	});
+});
+
 var testInt     = 0;
 var testString  = '5';
 var testBoolean = true;
@@ -36,4 +48,12 @@ var test3 = function(x, y)
 var test4 = function(arr, x)
 {
 	return arr[x];
+};
+
+var viewTestFunc = function()
+{
+	testInt++;
+	var dom = document.getElementById('viewTest');
+	dom.innerHTML = 'not jQuery : ' + testInt;
+	$('.jqueryViewTest').text('jQuery : ' + testInt);
 };
