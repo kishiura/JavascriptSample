@@ -10,6 +10,23 @@ $(document).ready(function()
 		i++;
 		$('.jqueryViewTest2').text(i);
 	});
+
+	$('.hover').hover(
+		function()
+		{
+			console.log('Hoverしたでしょ！');
+		},
+		function()
+		{
+			console.log('Hover外したでしょ！');
+		}
+	);
+
+	$(window).scroll(function()
+	{
+		var offset = $('html').offset().top;
+		console.log('スクロールしてまっせー！' + offset);
+	});
 });
 
 var testInt     = 0;
@@ -57,3 +74,21 @@ var viewTestFunc = function()
 	dom.innerHTML = 'not jQuery : ' + testInt;
 	$('.jqueryViewTest').text('jQuery : ' + testInt);
 };
+
+var ct = document.getElementById('clickTest');
+ct.addEventListener('click', function(e)
+{
+	console.log('こういうクリックもある');
+	return e.preventDefault();
+});
+
+setTimeout(function()
+{
+	console.log('5秒後にでる。正確には5秒ではない');
+}, 5000);
+
+setInterval(function()
+{
+	testInt++;
+	console.log(testInt);
+}, 1000);
